@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RealTimeChat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+
+            <div>
+                <h2>Chats</h2>
+                <p id="myName"></p>
+            </div>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search users..."
+            >
+
+        </div>
+
+
+        <div id="usersList" class="users-list">
+
+            <p class="loading">
+                Loading users...
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT CHAT AREA -->
+    <div class="chat-area">
+
+        <!-- CHAT HEADER -->
+
+        <div id="chatHeader" class="chat-header">
+
+            <div>
+
+                <h3 id="chatUserName">
+                    Select a user
+                </h3>
+
+                <span id="onlineStatus">
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGES -->
+
+        <div id="messagesContainer" class="messages-container">
+
+            <div class="welcome-message">
+
+                <h2>Welcome to RealTimeChat</h2>
+
+                <p>
+                    Select a user to start chatting.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TYPING -->
+
+        <div id="typingIndicator" class="typing-indicator">
+        </div>
+
+
+        <!-- MESSAGE INPUT -->
+
+        <div class="message-input-area">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+                autocomplete="off"
+            >
+
+            <button id="sendBtn">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="chat.js"></script>
+
+</body>
+</html>
