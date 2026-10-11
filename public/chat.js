@@ -1270,3 +1270,16 @@ socket.on(
 ========================= */
 
 loadUsers();
+
+
+/* =========================
+   OPEN PROFILE PAGE
+========================= */
+
+const profileButton = document.getElementById("profileButton");
+
+if (profileButton) {
+    profileButton.addEventListener("click", () => {
+        window.location.href = "/profile.html";
+    });
+}
